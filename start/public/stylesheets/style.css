@@ -1,6 +1,9 @@
 body {
   background-color: #C6E2FF; }
 
+#google-map {
+  height: 500px; }
+
 #day-header {
   display: inline-block; }
 
