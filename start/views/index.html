@@ -1,31 +1,89 @@
 {% extends "layout.html" %}
 
 {% block content %}
-<nav class="navbar navbar-inverse">
-  <div class="container">
-    <div class='navbar header'>
-      <h1>THIS IS THE NAVBAR</h1>
-    </div>
-  </div>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">TripPlanner!</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+
+            </ul>
+        </ul>
+    </div><!-- /.navbar-collapse -->
+</div><!-- /.container-fluid -->
 </nav>
 
-<h1>Welcome!</h1>
-<div>
-  <select>
-    {% for hotel in hotels %}
-    <option>{{ hotel.name }}</option>
-    {% endfor %}
-  </select>
-  <select>
-    {% for restaurant in restaurants %}
-    <option>{{ restaurant.name }}</option>
-    {% endfor %}
-  </select>
-  <select>
-    {% for activity in activities %}
-    <option>{{ activity.name }}</option>
-    {% endfor %}
-  </select>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8">
+            HELLO
+        </div>
+        <div class="col-lg-4">
+            <!-- Selections -->
+            <div class="row">
+                <div class="col-lg-12" id="everything-chooser">
+                    <h3>Hotels</h3>
+                    <select>
+                        {% for hotel in hotels %}
+                        <option>{{ hotel.name }}</option>
+                        {% endfor %}
+                    </select>
+                    <button type="button" class="btn btn-success btn-xs">X</button>
+                    <h3>Restaurants</h3>
+                    <select>
+                        {% for restaurant in restaurants %}
+                        <option>{{ restaurant.name }}</option>
+                        {% endfor %}
+                    </select>
+                    <button type="button" class="btn btn-success btn-xs">X</button>
+                    <h3>Things To Do</h3>
+                    <select>
+                        {% for activity in activities %}
+                        <option>{{ activity.name }}</option>
+                        {% endfor %}
+                    </select>
+                    <button type="button" class="btn btn-success btn-xs">X</button>
+                </div>
+            </div>
+            <!-- / Selections -->
+            <!-- Itinerary -->
+            <div class="row">
+                <div class="col-lg-12" id="day-module">
+                    <h2 id="day-header">Day 2</h2><button type="button" id="day-header-btn" class="btn btn-danger btn-xs">X</button>
+                    <div class="row" id="day-buttons">
+                        <div class="col-lg-12">
+                            <button type="button" class="btn btn-default btn-sm">1</button>
+                            <button type="button" class="btn btn-default btn-sm">2</button>
+                            <button type="button" class="btn btn-default btn-sm">3</button>
+                            <button type="button" class="btn btn-default btn-sm">+</button>
+                        </div>
+                    </div>
+                    <div class="row" id="day-selector">
+                        <div class="col-lg-12">
+                            <h4>My Hotel</h4>
+                            <h4>My Restaurants</h4>
+                            <h4>My Activities</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- / Itinerary -->
+        </div>
+    </div>
 </div>
-{% endblock %}
 
+
+{% endblock %}

@@ -1,2 +1,27 @@
-body h1 {
-  background-color: blue; }
+body {
+  background-color: #C6E2FF; }
+
+#day-header {
+  display: inline-block; }
+
+#day-header-btn {
+  margin: 15px; }
+
+#day-module {
+  background-color: #778899;
+  margin-top: 2rem;
+  border-radius: 10px;
+  padding-top: 2rem;
+  padding-bottom: 2rem; }
+
+#day-buttons {
+  background-color: #d3d3d3; }
+
+#day-selector {
+  background-color: #C0C0C0; }
+
+#everything-chooser {
+  background-color: #C0C0C0;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  border-radius: 10px; }
