@@ -1,10 +1,12 @@
 function initialize_gmaps() {
     // initialize new google maps LatLng object
-    var myLatlng = new google.maps.LatLng(40.705189,-74.009209);
+    //40.705189,-74.009209
+    var myLatlng = new google.maps.LatLng(
+22.319353,114.1633169);
     // set the map options hash
     var mapOptions = {
         center: myLatlng,
-        zoom: 16,
+        zoom: 11,
         mapTypeId: google.maps.MapTypeId.ROADMAP
     };
     // get the maps div's HTML obj
